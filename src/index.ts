@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import swaggerUi from "swagger-ui-express";
+const routes = require("./routes");
 
 const swagger = require("swagger-express-router");
 const YAML = require("yamljs");
@@ -8,9 +9,6 @@ const app = express();
 const port = 3200;
 
 const rootPath = path.join(__dirname);
-const controllers = {
-  helloWorldController: require("./controllers/hello-world-controller"),
-};
 
 const swaggerDocument = YAML.load(path.join(__dirname, "../src/api-doc.yml"));
 
@@ -26,7 +24,7 @@ app.use(
   })
 );
 
-swagger.setUpRoutes(controllers, app, swaggerDocument, true);
+swagger.setUpRoutes(routes, app, swaggerDocument, true);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
