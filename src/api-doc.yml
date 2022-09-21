@@ -1,0 +1,14 @@
+swagger: "2.0"
+basePath: "/api/v1"
+info:
+  title: "A getting started API."
+  version: "1.0.0"
+paths:
+  /worlds:
+    get:
+      description: returns the string 'hello world'
+      x-swagger-router-controller: helloWorldController
+      operationId: getHelloWorld
+      responses:
+        "200":
+          description: successful
