@@ -1,9 +1,19 @@
-# homeShare
+# Express Server Template
+ 
+An express server that uses OpenAPI/Swagger for routing and documentation, and Sequelize ORM to manage an RDBMS
 
-Simple file server + GUI for sharing files in a home network
+## Why OpenAPI?
 
-Additional Features:
+OpenAPI automagically generates API documentation and `swagger-express-router` uses the openAPI configuration YAML for routing. This saves time documenting and updating the API, and makes sure that the documentation is always up to date.
 
-- Shared Clipboard: Users on the home network can save and share clipboard content. Private clipboards also available.
-- Password Manager: Store credentials offline (encrypted in storage)
-- Todo: Simple todo app
+Additionally, the Swagger UI allows basic endpoint testing.
+
+## Why Sequelize?
+
+This allows the project to be agnostic of the type of RDBMS used, and allows the database system to be easily changed without significant code changes. Sequelize was chosen over TypeORM, because TypeORM has not been updated in a long time, while Sequelize continues to see regular updates at the time of writing
+
+## Setup
+
+1. Run `npm i` to install dependencies
+2. Follow [this guide](https://github.com/daryl-sen/sequelize-tutorial) to setup Sequelize
+3. Open `localhost:3200` to check that the server is running
