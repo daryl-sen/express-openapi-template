@@ -1,6 +1,6 @@
 # Express Server Template
 
-An express server that uses OpenAPI/Swagger for routing and documentation, and TSOA to automatically generate documentation for API endpoints.
+An express server that uses OpenAPI/Swagger and TSOA to automatically generate documentation for API endpoints.
 
 ## Why OpenAPI?
 
