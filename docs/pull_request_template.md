@@ -7,7 +7,7 @@
 ## How were the changes tested?
 
 1. Use a numeric list
-2. Be declaratic and numeric, make it so that someone without any context can follow
+2. Make it so that someone without any context can follow
 
 ## What new tests are added?
 
